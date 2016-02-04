@@ -1,0 +1,15 @@
+doctype html
+html
+    head
+        title Chat
+        link(rel='stylesheet', href='/css/stylesheet.css')
+    body
+        .chat
+            input#name.chat-name(type='text', placeholder='Enter Your Name')
+            .chat-messages
+            textarea#message.chat-textarea(cols='30', rows='10', placeholder='Type your message')
+            div
+                | Status:
+                span.chat-status Idle
+        script(src='/socket.io/socket.io.js')
+        script(src='/js/client.js')
